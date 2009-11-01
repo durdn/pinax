@@ -1,0 +1,42 @@
+@import 960/grid.sass
+=post-font
+  background: white
+  color: black
+  margin: 15px
+  font-family: "Lucida Grande", Tahoma, Verdana, sans-serif
+  font-size: 10pt
+
+
+.post
+  +post-font
+  border-bottom: 1px solid #eeeeee
+  min-height: 50px
+  padding-bottom: 10px
+  margin-top: 10px
+
+  .picture
+    float: left
+
+    img
+      height: 50px
+      width: 50px
+
+  .body
+    margin-left: 60px
+
+  .media
+    img
+      border: 1px solid #cccccc
+      padding: 3px
+
+    &:hover img
+      border: 1px solid #3b5998
+
+  a.actor
+    font-weight: bold
+
+  .meta
+    font-size: 11px
+
+  a.permalink
+    color: #777777
