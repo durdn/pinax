@@ -11,7 +11,7 @@ body
   +fnt
   :color #333
   :background-color #d3caaa
-  :background-image	url(/static/img/gradients/bg-ustyle.png)
+  :background-image	url(/site_media/static/pinax/images/bg-ustyle.png)
   :background-repeat	repeat-x
   :background-position	0% 0%
   :background-attachment	scroll
@@ -36,17 +36,47 @@ html
   :margin-top 20px
   :background-color #ffffff
 
-#logo
+.logo
   +alpha
   +grid(4,16)
   :margin-bottom 20px
 
-#top-right
-  +grid-prefix(2,16)
-  +grid(10,16)
+#right_tabs
+  +grid(12,16)
   +omega
+  :margin-top 10px
+  :font-size 13px
+  :font-weight normal
+  :padding-bottom 8px
+  :border-bottom 1px solid #d6d6d6
+  a
+    :color #656565
+    :font-size 13px
+    :font-weight normal
+    :background-image	url(/site_media/static/pinax/images/bullet-triangle.png)
+    :background-repeat	no-repeat
+    :background-position	0 50%
+    &:hover
+      :color #f2582d
+      :text-decoration underline
 
-#welcome
+
+#subnav
+  +alpha
+  +grid-prefix(2,16)
+  +grid(12,16)
+  +omega
+  :margin-bottom 10px
+  :float right
+  a
+    :color black
+    :font-size 13px
+    :font-weight normal
+    &:hover
+      :color black
+      :text-decoration underline
+
+#body
   +alpha
   +grid-prefix(1,16)
   +grid(14,16)
@@ -59,7 +89,7 @@ html
   :padding-right 80px
   :color #eeeeee
   :background-color #545454
-  :background-image	url(/static/img/gradients/bg-welcome.png)
+  :background-image	url(/site_media/static/pinax/images/bg-welcome.png)
   :background-repeat	repeat-y
   :background-position	100% 0%
   :background-attachment	scroll
