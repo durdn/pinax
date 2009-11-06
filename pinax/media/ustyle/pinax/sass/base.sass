@@ -109,18 +109,33 @@ html
       :color #f26a50 
       :font-weight bold
       :font-size 14px
-
     a
       :font-size 13px
       :fong-weight bold
       :color #fff
+      &:visited
+        :font-size 13px
+        :fong-weight bold
+        :color #fff
   dd
     :font-size 13px
     :fong-weight normal
     :margin-bottom 15px
-    :margin-left 19px
+    :margin-left 16px
     :color #fff
 
+
+#body
+  +alpha
+  +omega
+  +grid-prefix(1,16)
+  +grid(14,16)
+  +grid-suffix(1,16)
+  :padding-top 15px
+  :padding-bottom 15px
+  :margin-left 0
+  :margin-right 0
+  :padding-right 80px
 
 #subwelcome
   +alpha
@@ -147,7 +162,6 @@ html
 
 #what-is
   +alpha
-  +grid-prefix(1,16)
   +grid(7,16)
   :padding-top 15px
   :padding-bottom 15px
@@ -158,7 +172,6 @@ html
 
 #promise
   +grid(7,16)
-  +grid-suffix(1,16)
   +omega
   :padding-top 15px
   :padding-bottom 15px

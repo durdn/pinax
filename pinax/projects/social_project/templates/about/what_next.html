@@ -5,8 +5,7 @@
 
 {% block head_title %}{% trans "What Next?" %}{% endblock %}
 
-{% block body %}
-    <div id="welcome">
+{% block welcome %}
     <h1>{% trans "What Next?" %}</h1>
     
     {% if user.is_authenticated %}
@@ -50,7 +49,8 @@
                 {% endifsetting %}
             </p>
     {% endif %}
-    </div>
+{% endblock %}
+{% block subwelcome %}
     <div id="subwelcome">
     <div id="subwelcome-left">
     <p>
@@ -61,7 +61,8 @@
     </p>
     </div>
     </div>
- 
+{% endblock %}
+{% block body %}
     <div id="what-is">
     <h1>{% trans "Welcome to Pinax" %}</h1>
     

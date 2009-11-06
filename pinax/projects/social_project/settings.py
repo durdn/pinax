@@ -99,7 +99,7 @@ MIDDLEWARE_CLASSES = (
     'django_sorting.middleware.SortingMiddleware',
     'djangodblog.middleware.DBLogMiddleware',
     'pinax.middleware.security.HideSensistiveFieldsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.transaction.TransactionMiddleware',
 )
 
@@ -178,7 +178,7 @@ INSTALLED_APPS = (
     'django_sorting',
     'django_markup',
     'staticfiles',
-    'debug_toolbar',
+    #'debug_toolbar',
     
     # internal (for now)
     'analytics',
