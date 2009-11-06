@@ -7,7 +7,24 @@
 
 {% block tab_id %}id="home_tab"{% endblock %}
 
+{% block subwelcome %}
+    <div id="subwelcome-left">
+    {% if user.is_authenticated %}
+        {% url what_next as what_next_url %}
+        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}">What Next</a>?{% endblocktrans %}</p>
+    {% else %}
+        {% url acct_login as login_url %}
+        {% ifsetting ACCOUNT_OPEN_SIGNUP %}
+            {% url acct_signup as signup_url %}
+            <p>{% blocktrans %}You can <a href="{{ signup_url }}">Sign up</a> and <a href="{{ login_url }}">Log in</a> to try out the site.{% endblocktrans %}</p>
+        {% else %}
+            <p>{% blocktrans %}You can <a href="{{ login_url }}">Log in</a> to try out the site.{% endblocktrans %}</p>
+        {% endifsetting %}
+    {% endif %}
+    </div>
+{% endblock %}
 {% block body %}
+    <div id="what-is">
     <h1>{% trans "Welcome to Pinax" %}</h1>
     
     <p>
@@ -26,7 +43,9 @@
         <a href="http://pinaxproject.com/">http://pinaxproject.com/</a>.
         {% endblocktrans %}
     </p>
-    
+    </div>
+
+    <div id="promise">
     <h2>{% trans "About this project" %}</h2>
     
     <p>
@@ -41,19 +60,5 @@
         In 0.5 this was called "complete_project".
         {% endblocktrans %}
     </p>
-    
-    <hr />
-    {% if user.is_authenticated %}
-        {% url what_next as what_next_url %}
-        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}">What Next</a>?{% endblocktrans %}</p>
-    {% else %}
-        {% url acct_login as login_url %}
-        {% ifsetting ACCOUNT_OPEN_SIGNUP %}
-            {% url acct_signup as signup_url %}
-            <p>{% blocktrans %}You can <a href="{{ signup_url }}">Sign up</a> and <a href="{{ login_url }}">Log in</a> to try out the site.{% endblocktrans %}</p>
-        {% else %}
-            <p>{% blocktrans %}You can <a href="{{ login_url }}">Log in</a> to try out the site.{% endblocktrans %}</p>
-        {% endifsetting %}
-    {% endif %}
-    
+    </div>
 {% endblock %}

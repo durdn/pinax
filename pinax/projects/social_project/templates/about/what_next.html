@@ -87,5 +87,31 @@
         {% endblocktrans %}
     </p>
     </div>
- 
+    <div id="items">
+      <div class="item">
+      <h1><a href="{% url acct_email %}">verify an email address</a></h1>
+      <p>so you can receive notifications, reset your password and so people can find you more easily.</p>
+      </div>
+      
+      <div class="item">
+      <h1><a href="{% url profile_detail user %}">fill out your profile</a></h1>
+      <p>to tell the world a little about yourself.</p>
+      </div>
+      
+      <div class="item">
+      <h1><a href="{% url avatar_change %}">add an avatar</a></h1>
+      <p>so people can see what you look like.</p>
+      </div>
+      
+      <div class="item">
+      <h1><a href="{% url tribe_list %}">join some tribes</a></h1>
+      <p>to find people with similar interests to share and discuss with.</p>
+      </div>
+      
+      <div class="item">
+      <h1><a href="{% url profile_list %}">connect with friends</a></h1>
+      <p>so you can follow what they're up to.</p>
+      </div>
+    </div>
+
 {% endblock %}
