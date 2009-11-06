@@ -6,6 +6,7 @@
 {% block head_title %}{% trans "What Next?" %}{% endblock %}
 
 {% block body %}
+    <div id="welcome">
     <h1>{% trans "What Next?" %}</h1>
     
     {% if user.is_authenticated %}
@@ -37,7 +38,7 @@
                 {% endif %}
             {% endifsetting %}
         </dl>
-        {% else %}
+    {% else %}
             {% url acct_login as login_url %}
             
             <p class="what_next">
@@ -48,5 +49,42 @@
                     {% blocktrans %}Start by <a href="{{ login_url }}">logging in</a>.{% endblocktrans %}
                 {% endifsetting %}
             </p>
-        {% endif %}
+    {% endif %}
+    </div>
+    <div id="subwelcome">
+    <div id="subwelcome-left">
+    <p>
+        {% blocktrans %}
+        For more information about Pinax, see
+        <a href="http://pinaxproject.com/">http://pinaxproject.com/</a>.
+        {% endblocktrans %}
+    </p>
+    </div>
+    </div>
+ 
+    <div id="what-is">
+    <h1>{% trans "Welcome to Pinax" %}</h1>
+    
+    <p>
+        {% blocktrans %}
+        <b>Pinax</b> is a <a href="http://djangoproject.com/">Django</a>
+        project intended to provide a starting point for websites. By
+        integrating numerous reusable Django apps to take care of the
+        things that many sites have in common, it lets you focus on what
+        makes your site different.
+        {% endblocktrans %}
+    </p>
+    </div>
+    <div id="promise">
+    <h2>{% trans "About this project" %}</h2>
+    
+    <p>
+        {% blocktrans %}
+        This project demonstrates a social networking site. It provides
+        profiles, friends, photos, blogs, tribes, wikis, tweets, bookmarks,
+        swaps, locations and user-to-user messaging.
+        {% endblocktrans %}
+    </p>
+    </div>
+ 
 {% endblock %}

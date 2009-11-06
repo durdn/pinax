@@ -76,7 +76,7 @@ html
       :color black
       :text-decoration underline
 
-#body
+#welcome
   +alpha
   +grid-prefix(1,16)
   +grid(14,16)
@@ -94,6 +94,32 @@ html
   :background-position	100% 0%
   :background-attachment	scroll
   :opacity	1
+  h1
+    :font-size 21px
+  h2
+    :font-size 18.6667px
+  dt
+    :font-size 13px
+    :fong-weight bold
+    :color #fff
+    :margin-bottom 5px
+    &:before
+      //:content "\00BB \0020"
+      :content "\006F \0020"
+      :color #f26a50 
+      :font-weight bold
+      :font-size 14px
+
+    a
+      :font-size 13px
+      :fong-weight bold
+      :color #fff
+  dd
+    :font-size 13px
+    :fong-weight normal
+    :margin-bottom 15px
+    :margin-left 19px
+    :color #fff
 
 
 #subwelcome

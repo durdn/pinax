@@ -104,7 +104,13 @@ html { height: 100%; }
 #subnav a { color: black; font-size: 13px; font-weight: normal; }
 #subnav a:hover { color: black; text-decoration: underline; }
 
-#body { margin-left: 0; padding-left: 60px; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 820px; padding-right: 60px; margin-right: 0; margin-left: 0; margin-right: 0; padding-top: 25px; padding-bottom: 25px; padding-right: 80px; color: #eeeeee; background-color: #545454; background-image: url(/site_media/static/pinax/images/bg-welcome.png); background-repeat: repeat-y; background-position: 100% 0%; background-attachment: scroll; opacity: 1; }
+#welcome { margin-left: 0; padding-left: 60px; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 820px; padding-right: 60px; margin-right: 0; margin-left: 0; margin-right: 0; padding-top: 25px; padding-bottom: 25px; padding-right: 80px; color: #eeeeee; background-color: #545454; background-image: url(/site_media/static/pinax/images/bg-welcome.png); background-repeat: repeat-y; background-position: 100% 0%; background-attachment: scroll; opacity: 1; }
+#welcome h1 { font-size: 21px; }
+#welcome h2 { font-size: 18.6667px; }
+#welcome dt { font-size: 13px; fong-weight: bold; color: #fff; margin-bottom: 5px; }
+#welcome dt:before { content: "\006F \0020"; color: #f26a50; font-weight: bold; font-size: 14px; }
+#welcome dt a { font-size: 13px; fong-weight: bold; color: #fff; }
+#welcome dd { font-size: 13px; fong-weight: normal; margin-bottom: 15px; margin-left: 19px; color: #fff; }
 
 #subwelcome { margin-left: 0; margin-right: 0; padding-left: 60px; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 820px; padding-right: 60px; padding-top: 15px; padding-bottom: 15px; margin-left: 0; margin-right: 0; padding-right: 80px; background: #e6e6e6; }
 
